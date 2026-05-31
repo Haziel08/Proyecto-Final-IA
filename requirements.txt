@@ -1,6 +1,6 @@
-streamlit
-pandas
-numpy
-scikit-learn
-experta
-openpyxl
+streamlit  # framework para construir la interfaz web
+pandas  # manipulación y análisis de datos en tablas
+numpy  # operaciones numéricas y arreglos eficientes
+scikit-learn  # algoritmos de aprendizaje automático y validación
+experta  # motor de reglas para el sistema experto
+openpyxl  # lectura y escritura de archivos Excel .xlsx
