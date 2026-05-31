@@ -195,5 +195,20 @@ def main():
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
 
+    elif vista == "Dataset":
+        st.title("Dataset de entrenamiento")
+
+        try:
+            df = pd.read_csv("data/clientes_credito.csv")
+
+            st.write("Registros cargados:", len(df))
+            st.dataframe(df, use_container_width=True)
+
+            st.subheader("Distribución de dictámenes")
+            st.bar_chart(df["Dictamen_Final"].value_counts())
+
+        except FileNotFoundError:
+            st.error("No se encontró el archivo data/clientes_credito.csv")
+
 if __name__ == "__main__":
     main()
