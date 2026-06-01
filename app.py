@@ -210,5 +210,26 @@ def main():
         except FileNotFoundError:  # si el archivo no se encuentra
             st.error("No se encontró el archivo data/clientes_credito.csv")  # muestra mensaje de error
 
-if __name__ == "__main__":  # punto de entrada principal
-    main()  # ejecuta la función principal
+# ===== FOOTER =====
+
+st.markdown("---")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("""
+### Proyecto
+Sistema Experto Híbrido para Evaluación de Crédito
+""")
+
+with col2:
+    st.markdown("""
+### Integrantes
+- Luis Adolfo Baños Espino
+- María Teresa Castillo Martínez
+- Haziel Ibares Sánchez
+""")
+
+
+if __name__ == "__main__":
+    main()
